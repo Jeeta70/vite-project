@@ -41,7 +41,7 @@ const DoublyLinkedListUI: React.FC = () => {
 
       <div>
         <h3>Traversal:</h3>
-        <button onClick={handleTraverseForward}>Traverse Forwardd</button>
+        <button onClick={handleTraverseForward}>Traverse Forward</button>
         <button onClick={handleTraverseBackward}>Traverse Backward</button>
         <p>{traversal && traversal.join(' -> ')}</p>
       </div>
