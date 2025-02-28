@@ -1,0 +1,53 @@
+/* Define color variables */
+:root {
+  --primary-color: hsl(203, 70%, 60%);
+  --secondary-color: hsl(215, 100%, 96%);
+  --text-color: hsl(215, 100%, 96%);
+}
+
+/* Outer container for the animation */
+.tick-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 180px;
+  background-color: transparent;
+  margin: auto;
+}
+
+/* Circular background for the tick */
+.tick-circle {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tick Path Animation */
+.tick-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-tick 1s ease-out forwards;
+}
+
+/* Keyframes for the tick animation */
+@keyframes draw-tick {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Text below the tick */
+.tick-text {
+  margin-top: 10px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
